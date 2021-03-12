@@ -10,7 +10,7 @@ then
     brew install tree
   elif test "$(uname)" = "Linux"
   then
-    apt install tree
+    apt install tree -y
   fi
 fi
 

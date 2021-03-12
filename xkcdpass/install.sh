@@ -5,7 +5,7 @@
 if test ! $(which xkcdpass)
 then
   echo "  Installing xkcdpass for you."
-  pipx install autorecon
+  python3 -m pipx install autorecon
 fi
 
 exit 0

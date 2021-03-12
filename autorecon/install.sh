@@ -7,7 +7,8 @@ then
   if test ! $(which autorecon)
   then
     echo "  Installing AutoRecon for you."
-    pipx install autorecon
+    python3 -m pipx install autorecon
+    echo "  Installing tree for you."
   fi
 fi
 

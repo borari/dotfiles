@@ -5,7 +5,7 @@
 if test ! $(which rsactftool)
 then
   echo "  Installing rsactftool for you."
-  pipx install rsactftool
+  python3 -m pipx install rsactftool
 fi
 
 exit 0

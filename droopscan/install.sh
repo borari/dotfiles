@@ -6,7 +6,7 @@ if test "$(uname)" = "Linux"
 then
   if test ! $(which droopscan)  
   then
-    pipx install droopscan
+    python3 -m pipx install droopscan
   fi
 fi
 

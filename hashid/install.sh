@@ -7,7 +7,7 @@
 if test ! $(which hashid)
 then
   echo "  Installing hashid for you."
-  pipx install hashid
+  python3 -m pipx install hashid
 fi
 
 exit 0
