@@ -5,7 +5,7 @@
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 
-source $DOTFILES_ROOT/scripts/install-envs
+source $DOTFILES_ROOT/script/install-envs
 
 set -e
 

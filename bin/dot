@@ -46,6 +46,7 @@ then
   $DOT/macos/set-defaults.sh
 else
   echo "Skipping macOS defaults, not on macOS!"
+fi
 
 # Install homebrew
 $DOT/homebrew/install.sh 2>&1
