@@ -5,7 +5,13 @@
 if test ! $(which tree)
 then
   echo "  Installing tree for you."
-  brew install tree
+  if test "$(uname)" = "Darwin"
+  then
+    brew install tree
+  elif test "$(uname)" = "Linux"
+  then
+    apt install tree
+  fi
 fi
 
 exit 0

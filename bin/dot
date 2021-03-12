@@ -40,20 +40,16 @@ done
 
 export DOT=$HOME/.dotfiles
 
-# Set macOS defaults
+# Set macOS defaults/brew
 if [ "$(uname -s)" == "Darwin" ]
 then
   $DOT/macos/set-defaults.sh
+  $DOT/homebrew/install.sh 2>&1
+  echo "› brew update"
+  brew update
 else
   echo "Skipping macOS defaults, not on macOS!"
 fi
-
-# Install homebrew
-$DOT/homebrew/install.sh 2>&1
-
-# Upgrade homebrew
-echo "› brew update"
-brew update
 
 # Install software
 echo "› $DOT/script/install"
