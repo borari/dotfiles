@@ -24,6 +24,7 @@ else
     echo " Installing pip3 for you"
     apt install python3-pip -y
   fi
+  apt install python3-venv -y
   if test ! $(which pipx)
   then
     echo "  Installing pipx for you."
