@@ -1,0 +1,4 @@
+# Make directory then cd into it
+mkcd() {
+        mkdir -p -- "$1" && cd -P -- "$1"
+}

@@ -1,0 +1,6 @@
+# Allows for colored output after pipe, and tee's the output somewhere.
+# Usage: pty <command> <output file>
+
+ptytee() {
+        pty $1 | tee -a $2
+}

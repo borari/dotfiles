@@ -1,0 +1,2 @@
+# Need to symlink this file to ~/.zshenv so zsh will read zshrc from $ZDOTDIR
+export ZDOTDIR=$HOME/.config/zsh
