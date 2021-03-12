@@ -10,6 +10,7 @@ then
   echo "  Installing oh-my-zsh for you."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 elif [ -d "$ZSH" ]
+then
   echo " The oh-my-zsh directory already exists, skipping install..."
 fi
 
