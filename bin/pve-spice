@@ -7,8 +7,8 @@ set -e
 usage() { 
     echo "Usage: $0 [-u <string>] [-p <string>] vmid [node [proxy]]"
     echo
-    echo "-u username. Default root@pam"
-    echo "-p password. Default ''"
+    echo "-u username. Default root@pam | Use env var $PVE_USER from localrc."
+    echo "-p password. Default '' | Use env var $PVE_PASS from localrc."
     echo
     echo "vmid: id for VM"
     echo "node: Proxmox cluster node name"
@@ -75,4 +75,4 @@ CSRF="${CSRF%%\}*}"
 
 curl -f -s -S -k -b "PVEAuthCookie=$TICKET" -H "CSRFPreventionToken: $CSRF" "https://$PROXY:8006/api2/spiceconfig/nodes/$NODE/qemu/$VMID/spiceproxy" -d "proxy=$PROXY" > spiceproxy
 
-exec remote-viewer spiceproxy
+exec remote-viewer spiceproxy 2>&0 &

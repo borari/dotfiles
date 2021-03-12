@@ -8,3 +8,5 @@ then
     git clone https://github.com/PowerShellMafia/PowerSploit.git /opt/PowerSploit
   fi
 fi
+
+exit 0

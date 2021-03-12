@@ -1,8 +1,5 @@
-# source dir paths for all this to work right
-if [[ -a $DOT/system/dir ]]
-then
-  source $DOT/system/dir
-fi
+# shortcut to this dotfiles path is $DOT
+export DOT=$HOME/.dotfiles
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -10,7 +7,6 @@ fi
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
 
 # Stash your environment variables in $ZSH/_PRIVATE/localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but

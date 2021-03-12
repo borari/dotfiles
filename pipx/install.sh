@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Installs pipx and dependent applications
-
-# Checks for macOS since pipx is brew installed
+# pipx
+#
+# Installs w/brew on macOS, pip on Linux
 
 if test "$(uname)" = "Darwin"
 then
@@ -11,6 +11,10 @@ then
     echo "  Installing pipx via brew for you."
     brew install pipx
     pipx ensurepath
+    # Enables ZSH completion
+    autoload -U bashcompinit
+    bashcompinit
+    eval "$(register-python-argcomplete pipx)"
   else
     echo "  You already have pipx installed."
   fi
@@ -20,18 +24,13 @@ else
     echo "  Installing pipx for you."
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
+    # Enables ZSH completion
+    autoload -U bashcompinit
+    bashcompinit
+    eval "$(register-python-argcomplete pipx)"
   else
     echo "  You already have pipx installed."
   fi
-fi
-
-if test "$(uname)" = "Linux"
-then
-  pipx install virtualenv
-  pipx install impacket
-  pipx install rsactftool
-  pipx install droopescan
-  pipx install autorecon
 fi
 
 exit 0

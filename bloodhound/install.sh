@@ -4,7 +4,9 @@
 
 if test "$(uname -s)" = "Linux"
 then
-  if [ ! -d /opt/BloodHound ]; then
+  if [ ! -d "/opt/BloodHound" ]; then
     git clone https://github.com/BloodHoundAD/BloodHound.git /opt/BloodHound
   fi
 fi
+
+exit 0

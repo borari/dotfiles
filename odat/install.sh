@@ -9,3 +9,5 @@ then
     echo "Make sure to checkout odat branch: master-python3"
   fi
 fi
+
+exit 0
