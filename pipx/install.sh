@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 #
 # pipx
 #
@@ -21,7 +21,7 @@ then
 else
   if test ! $(which pip3)
   then
-    echo " Installting pip3 for you"
+    echo " Installing pip3 for you"
     apt install python3-pip -y
   fi
   if test ! $(which pipx)
