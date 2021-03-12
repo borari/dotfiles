@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 #
 # pipx
 #
@@ -12,7 +12,7 @@ then
     brew install pipx
     pipx ensurepath
     # Enables ZSH completion
-    autoload -U bashcompinit
+    /bin/zsh autoload -U bashcompinit
     bashcompinit
     eval "$(register-python-argcomplete pipx)"
   else
@@ -30,9 +30,9 @@ else
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
     # Enables ZSH completion
-    autoload -U bashcompinit
-    bashcompinit
-    eval "$(register-python-argcomplete pipx)"
+    /bin/zsh autoload -U bashcompinit
+    /bin/zsh bashcompinit
+    /bin/zsh eval "$(register-python-argcomplete pipx)"
   else
     echo "  You already have pipx installed."
   fi
