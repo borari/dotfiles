@@ -25,7 +25,7 @@ else
     apt install python3-pip -y
   fi
   apt install python3-venv -y
-  if test ! $(which pipx)
+  if [ ! -f "$HOME/.local/bin/pipx" ]
   then
     echo "  Installing pipx for you."
     python3 -m pip install --user pipx
