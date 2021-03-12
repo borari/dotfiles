@@ -22,7 +22,7 @@ else
   if test ! $(which pip3)
   then
     echo " Installting pip3 for you"
-    apt install python3-pip
+    apt install python3-pip -y
   fi
   if test ! $(which pipx)
   then
