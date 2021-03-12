@@ -19,6 +19,11 @@ then
     echo "  You already have pipx installed."
   fi
 else
+  if test ! $(which pip3)
+  then
+    echo " Installting pip3 for you"
+    apt install python3-pip
+  fi
   if test ! $(which pipx)
   then
     echo "  Installing pipx for you."

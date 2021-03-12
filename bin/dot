@@ -51,6 +51,9 @@ else
   echo "Skipping macOS defaults, not on macOS!"
 fi
 
+# Install pipx
+$DOT/pipx/install.sh
+
 # Install software
 echo "› $DOT/script/install"
 $DOT/script/install
