@@ -4,6 +4,12 @@
 
 export ZSH="$HOME/.local/share/oh-my-zsh"
 
+# This directory wasn't getting made?
+if [ ! -d "$HOME/.local/share/zsh" ]
+then
+  mkdir -p "$HOME/.local/share/zsh"
+fi
+
 # Installs oh-my-zsh
 if [ ! -d "$ZSH" ]
 then
