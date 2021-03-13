@@ -44,7 +44,6 @@ then
   echo "  Installing powerlevel10k theme for you."
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$ZSH/custom}/themes/powerlevel10k
 elif [ -d "$ZSH/custom/themes/powerlevel10k" ]
+then
   echo " The powerlevel10k directory already exists, skipping install..."
 fi
-
-exit 0
