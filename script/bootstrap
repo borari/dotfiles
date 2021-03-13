@@ -117,6 +117,7 @@ install_dotfiles () {
 
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.sym-autorecon' -not -path '*.git*')
   do
+    mkdir -p "$HOME/.config/AutoRecon"
     dst="$HOME/.config/AutoRecon/$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
@@ -129,22 +130,27 @@ install_dotfiles () {
 
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.sym-vim' -not -path '*.git*')
   do
+    mkdir -p "$HOME/.config/vim"
     dst="$HOME/.config/vim/$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
 
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.sym-wget' -not -path '*.git*')
   do
+    mkdir -p "$HOME/.config/wget"
     dst="$HOME/.config/wget/$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
 
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.sym-zsh' -not -path '*.git*')
   do
+    mkdir -p "$HOME/.config/zsh"
     dst="$HOME/.config/zsh/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
 }
+
+install_dotfiles
 
 info "installing dependencies"
 if source bin/dot | while read -r data; do info "$data"; done
@@ -153,8 +159,6 @@ then
 else
   fail "error installing dependencies"
 fi
-
-install_dotfiles
 
 echo ''
 echo '  All installed!'

@@ -38,5 +38,3 @@ else
     echo "  You already have pipx installed."
   fi
 fi
-
-exit 0

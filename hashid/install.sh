@@ -9,5 +9,3 @@ then
   echo "  Installing hashid for you."
   python3 -m pipx install hashid
 fi
-
-exit 0

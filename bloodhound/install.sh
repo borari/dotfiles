@@ -8,5 +8,3 @@ then
     git clone https://github.com/BloodHoundAD/BloodHound.git /opt/BloodHound
   fi
 fi
-
-exit 0

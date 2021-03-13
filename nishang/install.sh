@@ -8,5 +8,3 @@ then
     git clone https://github.com/samratashok/nishang.git /opt/nishang
   fi
 fi
-
-exit 0

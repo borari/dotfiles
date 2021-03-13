@@ -13,5 +13,3 @@ then
     apt install tree -y
   fi
 fi
-
-exit 0

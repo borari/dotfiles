@@ -7,5 +7,3 @@ then
   echo "  Installing rsactftool for you."
   python3 -m pipx install rsactftool
 fi
-
-exit 0

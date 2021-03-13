@@ -8,5 +8,3 @@ then
   echo "  Installing rdesktop for you."
   brew install rdesktop
 fi
-
-exit 0

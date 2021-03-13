@@ -7,5 +7,3 @@ then
   echo "  Installing xkcdpass for you."
   python3 -m pipx install autorecon
 fi
-
-exit 0

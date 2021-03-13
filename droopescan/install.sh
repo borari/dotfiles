@@ -1,13 +1,11 @@
 #!/bin/bash
 #
-# Installs droopscan via pipx
+# Installs droopescan via pipx
 
 if test "$(uname)" = "Linux"
 then
-  if test ! $(which droopscan)  
+  if test ! $(which droopescan)  
   then
     python3 -m pipx install droopescan
   fi
 fi
-
-exit 0

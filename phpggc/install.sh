@@ -8,5 +8,3 @@ then
     git clone https://github.com/ambionics/phpggc.git /opt/phpggc
   fi
 fi
-
-exit 0

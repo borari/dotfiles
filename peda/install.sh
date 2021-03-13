@@ -8,5 +8,3 @@ then
     git clone git@github.com:borari/peda.git /opt/peda
   fi
 fi
-
-exit 0
