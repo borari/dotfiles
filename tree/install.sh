@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Installs tree via brew
+# Installs tree
 
 if test ! $(which tree)
 then
@@ -10,6 +10,6 @@ then
     brew install tree
   elif test "$(uname)" = "Linux"
   then
-    apt install tree -y
+    sudo apt install tree -y
   fi
 fi

@@ -1,10 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Pulls peda source from my private git
 
 if test "$(uname -s)" = "Linux"
 then
   if [ ! -d /opt/peda ]; then
-    git clone git@github.com:borari/peda.git /opt/peda
+    sudo git clone git@github.com:borari/peda.git /opt/peda
+    sudo chown $USER:$USER /opt/peda
   fi
 fi

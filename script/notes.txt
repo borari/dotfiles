@@ -1,14 +1,14 @@
 # Extra Kali Steps
 
-# Git rid of sudo req
+# If you want to enable root on Kali:
 1. First enable root login
   sudo apt install kali-root-login
   sudo passwd
-2. With root user enabled, log out of borari, into root.
+2. With root user enabled, log out of $USER, into root.
 3. Make sure all processes from non-root user are killed
   ps -aux
 4. Change your UID/GID.
-  usermod -u 0 -g 0 -o borari
+  usermod -u 0 -g 0 -o $USER
 
 # Enable root ssh login
 1. First enable SSH to start on boot, then start it.
