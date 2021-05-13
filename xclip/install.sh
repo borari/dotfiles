@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # xclip
 #
@@ -11,5 +11,5 @@ fi
 
 if test ! "$(which xclip)"
 then
-  apt install xclip -y
+  sudo apt install xclip -y
 fi
