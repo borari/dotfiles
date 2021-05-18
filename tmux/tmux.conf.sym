@@ -4,6 +4,9 @@
 # By Nicholas Marriott. Public domain.
 #
 
+# Personal settings/tweaks
+set -g history-limit 25000
+
 # Some tweaks to the status line
 set -g status-right "%H:%M"
 set -g window-status-current-style "underscore"
@@ -69,6 +72,3 @@ setw -t0:2 aggressive-resize on
 neww -d
 neww -d
 neww -d
-
-# Personal settings/tweaks
-set -g history-limit 25000

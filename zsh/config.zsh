@@ -5,8 +5,8 @@ autoload -U $DOT/functions/*(:t)
 export TERM=xterm-256color
 
 HISTFILE="$XDG_DATA_HOME/zsh/zsh_history"
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=200000
 ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"       # If true _ and - will be interchangeable.
 WORDCHARS=${WORDCHARS//\/}      # Don't consider certain characters part of the word
