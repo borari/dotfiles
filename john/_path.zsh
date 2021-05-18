@@ -1,1 +1,1 @@
-export PATH='/usr/share/john:$PATH'
+export PATH="/usr/share/john:$PATH"
