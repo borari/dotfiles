@@ -71,4 +71,4 @@ neww -d
 neww -d
 
 # Personal settings/tweaks
-set-option -g history-limit 10000
+set -g history-limit 25000
