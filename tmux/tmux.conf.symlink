@@ -59,16 +59,3 @@ bind F set -w window-size
 # Keys to toggle monitoring activity in a window and the synchronize-panes option
 bind m set monitor-activity
 bind y set synchronize-panes\; display 'synchronize-panes #{?synchronize-panes,on,off}'
-
-# Create a single default session - because a session is created here, tmux
-# should be started with "tmux attach" rather than "tmux new"
-neww -d -ncontrol 'exec echo "Don\'t forget to connect to the VPN. Happy Hacking...'
-setw -t0:1 aggressive-resize on
-neww -d
-setw -t0:2 aggressive-resize on
-neww -d
-setw -t0:3 aggressive-resize on
-neww -d
-setw -t0:4 aggressive-resize on
-neww -d
-setw -t0:5 aggressive-resize on
